@@ -13,7 +13,8 @@ before_install:
   - export PATH="$HOME/bin:$PATH"
 
 install: glide install -strip-vendor
-script: 
+script:
+  - docker run -it --rm liupeng0518/debian-debootstrap:mips64el-stretch
   - mkdir -p /home/travis/gopath/src/k8s.io/helm && cp * -a /home/travis/gopath/src/k8s.io/helm && cd /home/travis/gopath/src/k8s.io/helm && make docker-build VERSION="v2.13.1" && docker images
 
 after_success:
