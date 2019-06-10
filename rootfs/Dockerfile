@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM alpine:3.7
+FROM liupeng0518/debian-debootstrap:mips64el-stretch
 
-RUN apk update && apk add ca-certificates socat && rm -rf /var/cache/apk/*
+RUN apt-get update && apt install -y ca-certificates socat && rm -rf /var/cache/apk/*
 
 ENV HOME /tmp
 
