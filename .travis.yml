@@ -14,7 +14,7 @@ before_install:
 
 install: glide install -strip-vendor
 script: 
-  - make
+  - make docker-build VERSION="v2.13.1"
   
 after_success:
     - docker images
