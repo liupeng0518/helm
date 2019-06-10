@@ -14,7 +14,7 @@
 
 FROM liupeng0518/debian-debootstrap:mips64el-stretch
 
-RUN apt-get update && apt install -y ca-certificates socat && rm -rf /var/cache/apk/*
+# RUN apt-get update && apt install -y ca-certificates socat && rm -rf /var/cache/apk/*
 
 ENV HOME /tmp
 
