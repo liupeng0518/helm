@@ -14,7 +14,7 @@ before_install:
 
 install: glide install -strip-vendor
 script: 
-  - mkdir -p /home/travis/gopath/k8s.io && mv helm /home/travis/gopath/src && cd /home/travis/gopath/src/helm && make docker-build VERSION="v2.13.1"
+  - mkdir -p /home/travis/gopath/src/k8s.io/helm && mv . .* /home/travis/gopath/src/k8s.io/helm && cd /home/travis/gopath/src/k8s.io/helm && make docker-build VERSION="v2.13.1"
   
 after_success:
     - docker images
