@@ -1,4 +1,4 @@
-DOCKER_REGISTRY   ?= gcr.io
+DOCKER_REGISTRY   ?= liupeng0518
 IMAGE_PREFIX      ?= kubernetes-helm
 DEV_IMAGE         ?= golang:1.11
 SHORT_NAME        ?= tiller
