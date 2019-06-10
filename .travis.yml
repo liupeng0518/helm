@@ -1,7 +1,7 @@
 language:
   - go 
 sudo: required
-
+services: docker
 go:
   - "1.11"
 
@@ -15,3 +15,7 @@ before_install:
 install: glide install -strip-vendor
 script: 
   - make
+  
+after_success:
+    - docker images
+#    - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && docker push $DOCKER_REPO
